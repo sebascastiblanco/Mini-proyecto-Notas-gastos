@@ -1,24 +1,19 @@
+import fs from "fs";
 
 export const agregar = (funcionId, datos, notas) => {
-
-    let agregarNota = {
+  
+  let agregarNota = {
     id: funcionId(datos), 
-    nombre: "Jose Fernando",
-    nota: 50, 
-    comentario:'Excelente'
+    fecha: "30/11/2025",
+    total: 300000,
+    descripcion: "Pago Celular"
   };
 
-  let agregarNota2 = { 
-    id: funcionId(datos), 
-    nombre: "Andres Felipe", 
-    nota: 40, 
-    comentario:'Debes mejorar' 
-  };
+  notas.push(agregarNota);
 
-  
-  let agregarTotalNotas = notas.push(agregarNota, agregarNota2);
-  
-  return agregarTotalNotas;
+  fs.writeFileSync("datos.json", JSON.stringify(notas, null , 2), (err) => {
+    if (err) throw err;
+  });
 }
 
 

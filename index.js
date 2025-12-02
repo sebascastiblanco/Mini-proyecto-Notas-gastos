@@ -1,16 +1,20 @@
 import { idAutomatico, datosId } from "./creacionId.js";
 import { agregar } from "./agregarNotas.js";
+import fs from "fs";
 import { mostrarNotas } from "./mostrarNotas.js";
-import { buscar } from "./buscarNotas.js";
+/*import { buscar } from "./buscarNotas.js";
+*/
 
-//array para agregar notas y funcion
-export const notas = [];
+let notas = JSON.parse(fs.readFileSync("./datos.json", "utf8", (err, datos) => {
+    if (err) {
+        console.error("No se pueden visualizar las notas");
+        return;
+    }
+    console.log(datos);
+}));
 
 
 agregar(idAutomatico, datosId, notas);
 
-console.log(notas);
+console.log(mostrarNotas());
 
-mostrarNotas(notas);
-
-console.log(buscar(notas));
