@@ -1,13 +1,13 @@
 import { idAutomatico, datosId } from "./creacionId.js";
 import { agregar } from "./agregarNotas.js";
 import fs from "fs";
-import { mostrarNotas } from "./mostrarNotas.js";
-/*import { buscar } from "./buscarNotas.js";
-*/
+import { mostrarGastos } from "./mostrarGastos.js";
+import { buscar } from "./buscarNotas.js";
+
 
 let notas = JSON.parse(fs.readFileSync("./datos.json", "utf8", (err, datos) => {
     if (err) {
-        console.error("No se pueden visualizar las notas");
+        console.error("No se pueden visualizar los gastos");
         return;
     }
     console.log(datos);
@@ -16,5 +16,7 @@ let notas = JSON.parse(fs.readFileSync("./datos.json", "utf8", (err, datos) => {
 
 agregar(idAutomatico, datosId, notas);
 
-console.log(mostrarNotas());
+console.log(mostrarGastos());
 
+
+//console.log(buscar());

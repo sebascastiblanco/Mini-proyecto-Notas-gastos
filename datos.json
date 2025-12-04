@@ -1,8 +1,14 @@
 [
   {
-    "id": "Ca92",
+    "id": "Ca5OOO",
     "fecha": "30/11/2025",
     "total": 300000,
     "descripcion": "Pago Celular"
+  },
+  {
+    "id": "Ab72PPP",
+    "fecha": "03/12/2025",
+    "total": 700000,
+    "descripcion": "Pago Moto"
   }
 ]

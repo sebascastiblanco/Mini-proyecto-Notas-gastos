@@ -1,7 +1,11 @@
+import fs from "fs";
 
-export const buscar = (buscarNotas) => {
+export const buscar = () => {
 
-  let notaBuscada = buscarNotas.find(notas => notas.nota === 50);
+  let encontrarGasto = JSON.parse(fs.readFileSync("./datos.json", "utf8"));
 
-  return notaBuscada;
+  let mostrar = encontrarGasto.find(fecha => fecha.fecha === "03/12/2025"); 
+  //buscarNotas.find(notas => notas.nota === 50);
+
+  return mostrar;
 }
