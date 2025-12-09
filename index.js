@@ -1,8 +1,8 @@
 import { idAutomatico, datosId } from "./creacionId.js";
 import { agregar } from "./agregarNotas.js";
-import fs from "fs";
 import { mostrarGastos } from "./mostrarGastos.js";
 import { buscar } from "./buscarNotas.js";
+import fs from "fs";
 
 
 let notas = JSON.parse(fs.readFileSync("./datos.json", "utf8", (err, datos) => {
@@ -12,11 +12,10 @@ let notas = JSON.parse(fs.readFileSync("./datos.json", "utf8", (err, datos) => {
     }
     console.log(datos);
 }));
-
-
+/*
 agregar(idAutomatico, datosId, notas);
 
 console.log(mostrarGastos());
+*/
+console.log(buscar());
 
-
-//console.log(buscar());

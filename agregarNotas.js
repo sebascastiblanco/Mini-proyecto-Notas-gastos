@@ -1,17 +1,18 @@
+import { fecha } from "./fecha.js";
 import fs from "fs";
 
 export const agregar = (funcionId, datos, notas) => {
   
   let agregarNota = {
     id: funcionId(datos), 
-    fecha: "30/11/2025",
+    fecha: fecha(),
     total: 300000,
     descripcion: "Pago Celular"
   };
 
   let agregarNota2 = {
     id: funcionId(datos), 
-    fecha: "03/12/2025",
+    fecha: fecha(),
     total: 700000,
     descripcion: "Pago Moto"
   }

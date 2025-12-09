@@ -8,7 +8,7 @@ export const mostrarGastos = () => {
 
     for ( let i = 0; i < cantidadGastos.length; i++) {
       console.log(`Id: ${cantidadGastos[i].id}`);
-      console.log(`Fecha: ${cantidadGastos[i].fecha}`);
+      console.log(`Fecha: ${cantidadGastos[i].fecha.año}/${cantidadGastos[i].fecha.mes}/${cantidadGastos[i].fecha.dia}`);
       console.log(`Valor: ${cantidadGastos[i].total}`);
       console.log(`Concepto: ${cantidadGastos[i].descripcion}`);
       console.log("---------------------------------------");

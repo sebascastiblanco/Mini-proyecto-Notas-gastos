@@ -1,13 +1,21 @@
 [
   {
-    "id": "Ca5OOO",
-    "fecha": "30/11/2025",
+    "id": "Ba20PPP",
+    "fecha": {
+      "año": 2025,
+      "mes": 12,
+      "dia": 8
+    },
     "total": 300000,
     "descripcion": "Pago Celular"
   },
   {
-    "id": "Ab72PPP",
-    "fecha": "03/12/2025",
+    "id": "Ba71OOO",
+    "fecha": {
+      "año": 2025,
+      "mes": 12,
+      "dia": 8
+    },
     "total": 700000,
     "descripcion": "Pago Moto"
   }
