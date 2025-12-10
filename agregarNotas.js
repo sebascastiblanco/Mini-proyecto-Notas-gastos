@@ -1,27 +1,21 @@
 import { fecha } from "./fecha.js";
 import fs from "fs";
 
-export const agregar = (funcionId, datos, notas) => {
+export const agregar = (funcionId, datos, notas, respuestas) => {
   
   let agregarNota = {
     id: funcionId(datos), 
     fecha: fecha(),
-    total: 300000,
-    descripcion: "Pago Celular"
+    total: respuestas.total,
+    categoria: respuestas.categoria,
+    descripcion: respuestas.descripcion
   };
 
-  let agregarNota2 = {
-    id: funcionId(datos), 
-    fecha: fecha(),
-    total: 700000,
-    descripcion: "Pago Moto"
-  }
+  notas.push(agregarNota);
 
-  notas.push(agregarNota, agregarNota2);
+  fs.writeFileSync("datos.json", JSON.stringify(notas, null , 2));
 
-  fs.writeFileSync("datos.json", JSON.stringify(notas, null , 2), (err) => {
-    if (err) throw err;
-  });
+  console.log('✅ Gasto agregado correctamente');
 }
 
 

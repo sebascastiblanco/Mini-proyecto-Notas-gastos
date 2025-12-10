@@ -7,6 +7,7 @@ export const mostrarGastos = () => {
     let cantidadGastos = JSON.parse(fs.readFileSync(ruta, "utf8"));
 
     for ( let i = 0; i < cantidadGastos.length; i++) {
+      console.log(`                                                   `);
       console.log(`Id: ${cantidadGastos[i].id}`);
       console.log(`Fecha: ${cantidadGastos[i].fecha.año}/${cantidadGastos[i].fecha.mes}/${cantidadGastos[i].fecha.dia}`);
       console.log(`Valor: ${cantidadGastos[i].total}`);
