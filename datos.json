@@ -20,5 +20,16 @@
     "total": "250000",
     "categoria": "Servicios",
     "descripcion": "Pago Moto"
+  },
+  {
+    "id": "Cb44PPP",
+    "fecha": {
+      "año": 2025,
+      "mes": 12,
+      "dia": 12
+    },
+    "total": "350000",
+    "categoria": "Servicios",
+    "descripcion": "Finalizacion Pago Moto"
   }
 ]

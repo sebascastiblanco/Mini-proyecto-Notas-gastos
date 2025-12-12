@@ -16,11 +16,12 @@ let notas = JSON.parse(fs.readFileSync("./datos.json", "utf8", (err, datos) => {
 
 inquirer
   .prompt([
+
     {
     type: 'list',
     name: 'opcion',
     message: 'Selecciona una opción: ',
-    choices: ['Agregar gastos', 'Buscar gastos', 'Mostrar Gastos'],
+    choices: ['Agregar gastos', 'Buscar gastos', 'Mostrar Gastos', 'Salir'],
     }
   ])
   .then(async ({ opcion }) => {
@@ -53,7 +54,7 @@ inquirer
 
         if (opcion === 'Buscar gastos') {
             
-            const respuestas = await inquirer.prompt([
+            await inquirer.prompt([
                 {
                     type: 'list',
                     name: 'opcion',
@@ -111,7 +112,7 @@ inquirer
 
         if (opcion === 'Mostrar Gastos') {
 
-            const mostrar = await inquirer.prompt([
+            await inquirer.prompt([
 
                 {
                     name: 'mostrar'
@@ -120,5 +121,14 @@ inquirer
             mostrarGastos();
             return;
         }
+
+        if (opcion === 'Salir') {
+            console.log('Gracias por usar el Programa, nos vemos pronto!! 😁')
+        }
+
+});
+
+  
+
     
-  });
+

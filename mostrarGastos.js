@@ -5,6 +5,7 @@ const ruta = "./datos.json";
 export const mostrarGastos = () => {   
 
     let cantidadGastos = JSON.parse(fs.readFileSync(ruta, "utf8"));
+    let totalAcumulado = 0;
 
     for ( let i = 0; i < cantidadGastos.length; i++) {
       console.log(`                                                   `);
@@ -13,14 +14,19 @@ export const mostrarGastos = () => {
       console.log(`Valor: ${cantidadGastos[i].total}`);
       console.log(`Concepto: ${cantidadGastos[i].descripcion}`);
       console.log("---------------------------------------");
+
+      let total = parseInt(cantidadGastos[i].total);
+      totalAcumulado += total;
     }
     
     if (cantidadGastos.length === 0) {
-        return`Tienes ${cantidadGastos.length} gastos durante el mes`;
+        console.log(`Tienes ${cantidadGastos.length} gastos durante el mes`);
     } else if (cantidadGastos.length === 1) {
         return `Tienes ${cantidadGastos.length} gasto durante el mes`;
     } else if (cantidadGastos.length >= 2) {
-        return `Tienes ${cantidadGastos.length} gastos durante el mes`;
+        console.log( `Tienes ${cantidadGastos.length} gastos durante el mes`);
     }
+
+    console.log(`El total de esos gastos es: ${totalAcumulado}`);
 
 }
