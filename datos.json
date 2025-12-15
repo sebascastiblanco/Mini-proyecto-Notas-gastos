@@ -1,16 +1,5 @@
 [
   {
-    "id": "Ba42PPP",
-    "fecha": {
-      "año": 2025,
-      "mes": 12,
-      "dia": 9
-    },
-    "total": "10000",
-    "categoria": "Mi esposa",
-    "descripcion": "Cenita con la reina"
-  },
-  {
     "id": "Bc37OOO",
     "fecha": {
       "año": 2025,
@@ -31,5 +20,27 @@
     "total": "350000",
     "categoria": "Servicios",
     "descripcion": "Finalizacion Pago Moto"
+  },
+  {
+    "id": "Ac83OOO",
+    "fecha": {
+      "año": 2025,
+      "mes": 12,
+      "dia": 15
+    },
+    "total": "60000",
+    "categoria": "Entretenimiento",
+    "descripcion": "Regalos navidad"
+  },
+  {
+    "id": "Bc57OOO",
+    "fecha": {
+      "año": 2025,
+      "mes": 12,
+      "dia": 15
+    },
+    "total": "15000",
+    "categoria": "Transporte",
+    "descripcion": "Tanqueo moto"
   }
 ]
